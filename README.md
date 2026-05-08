@@ -1,0 +1,1 @@
+My name is Neo Clark and I am a software engineer. I am doing full stack for a python project so I eagered to learn more. 
