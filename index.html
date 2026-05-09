@@ -10,6 +10,7 @@
   <header class="header-content">
     <h1>Neo Clark</h1>
     <p>Computer Science Student</p>
+    <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
   </header>
 
   <main>
@@ -41,6 +42,33 @@
   <footer>
     <p>&copy; 2026 Neo Clark. All rights reserved.</p>
   </footer>
+
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    function setTheme(isDark) {
+      if (isDark) {
+        body.classList.add('dark-mode');
+        themeToggle.textContent = '☀️';
+        themeToggle.title = 'Switch to light mode';
+      } else {
+        body.classList.remove('dark-mode');
+        themeToggle.textContent = '🌙';
+        themeToggle.title = 'Switch to dark mode';
+      }
+    }
+
+    // Check initial preference
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setTheme(prefersDark);
+
+    // Toggle on click
+    themeToggle.addEventListener('click', () => {
+      const isDark = body.classList.contains('dark-mode');
+      setTheme(!isDark);
+    });
+  </script>
 </body>
 </html>
 

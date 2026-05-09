@@ -17,6 +17,7 @@ header {
   text-align: center;
   margin-bottom: 30px;
   border-radius: 8px;
+  position: relative;
 }
 
 header h1 {
@@ -33,6 +34,22 @@ header p {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: transform 0.3s ease;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
 }
 
 
@@ -84,4 +101,35 @@ footer {
   margin-top: 50px;
   color: #666;
   font-size: 0.9em;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+.dark-mode header {
+  background-color: #333;
+}
+
+.dark-mode section {
+  background-color: #2a2a2a;
+  box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+}
+
+.dark-mode #interests li {
+  border-bottom-color: #555;
+}
+
+.dark-mode a {
+  color: #4da6ff;
+}
+
+.dark-mode a:hover {
+  color: #80c1ff;
+}
+
+.dark-mode footer {
+  color: #aaa;
 }
